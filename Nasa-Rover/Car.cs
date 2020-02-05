@@ -88,6 +88,9 @@ namespace Nasa_Rover
                     }
                     break;
 
+                default:
+                    throw new InvalidOperationException("Rover can just turn to the rigth 'R', or to the left 'L'");
+
             }
         }
 
@@ -111,8 +114,10 @@ namespace Nasa_Rover
                 case 3: // COORD[0] = "W"
                     this.x += -1;
                     break;
+                default:
+                    throw new InvalidOperationException("Unexpected value");
 
-            };
+            }
 
         }
 
