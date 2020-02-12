@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace Nasa_Rover
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
@@ -123,6 +123,8 @@ namespace Nasa_Rover
                     //Console.WriteLine(movement + "--> Rover.actual_position_" + Rover.actual_position());
                     //Console.ReadLine();
                     break;
+                default:
+                    throw new InvalidOperationException("Unexpected value");
             }
         }
 
